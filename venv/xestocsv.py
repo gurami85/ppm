@@ -3,7 +3,6 @@
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import os, sys
 
 from opyenxes.extension.XExtensionParser import XExtensionParser
@@ -21,7 +20,6 @@ from opyenxes.model.XAttributeList import XAttributeList
 from opyenxes.model.XAttributeLiteral import XAttributeLiteral
 from opyenxes.model.XAttributeMap import XAttributeMap
 from opyenxes.model.XAttributeTimestamp import XAttributeTimestamp
-
 
 # We must parse the new extension, can be the link or the xml file
 print("[info] XExtensionParser starts the extension parsing");
@@ -44,18 +42,21 @@ XExtensionManager().register(ext_lifecycle)
 print("[info] XExtensionManager completed the registration of extensions");
 
 # Now we can parse
-with open("./data/review_example_large.xes") as file:
+with open("./data/bpic2012_t100.xes") as file:
     logs = XUniversalParser().parse(file)
 
 log = logs[0]
-print("# traces in 1st log = %d" % (len(log)))
+for trace in log:
+    # extract the case id from the <trace> tag
+    case_id = trace.get_attributes()['concept:name'].get_value()
+    for event in trace:
+        attrs = event.get_attributes().items()
+        for key, value in attrs:
+            if value.get_key() == 'concept:name':
+                print('concept:name, %s' % (value.get_value()))
+            elif value.get_key() == 'time:timestamp':
+                print('time:timestamp, %s' % (value.get_value()))
+            elif value.get_key() == 'lifecycle:transition':
+                print('lifecycle:transition, %s' % (value.get_value()))
 
-trace = log[0]
-print("# events in 1st trace = %d" % (len(trace)))
-
-event = trace[0]
-print("# attributes in 1st event = %d" % (len(event.get_attributes())))
-
-for key, value in event.get_attributes().items():
-    print("%s=%s" %(key, value))
 

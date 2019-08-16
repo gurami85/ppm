@@ -56,7 +56,7 @@ XExtensionManager().register(ext_lifecycle)
 
 # Now we can parse
 # with open("./data/review_example_large.xes") as file:
-with open("./data/BPIC2012.xes.gz") as file:
+with open("./data/bpic2012.xes.gz") as file:
     log = XUniversalParser().parse(file)
 
 CASEID = 'caseid'
