@@ -45,18 +45,29 @@ print("[info] XExtensionManager completed the registration of extensions");
 with open("./data/bpic2012_t100.xes") as file:
     logs = XUniversalParser().parse(file)
 
+
 log = logs[0]
+log_dict = {'case_id':[], 'concept:name':[], 'lifecycle:transition':[], 'time:timestamp':[]}
+
 for trace in log:
     # extract the case id from the <trace> tag
     case_id = trace.get_attributes()['concept:name'].get_value()
     for event in trace:
-        attrs = event.get_attributes().items()
-        for key, value in attrs:
-            if value.get_key() == 'concept:name':
-                print('concept:name, %s' % (value.get_value()))
-            elif value.get_key() == 'time:timestamp':
-                print('time:timestamp, %s' % (value.get_value()))
-            elif value.get_key() == 'lifecycle:transition':
-                print('lifecycle:transition, %s' % (value.get_value()))
+        # except the event whose 'lifecycle:transition' is 'schedule'
+        if event.get_attributes()['lifecycle:transition'].get_value().lower() != 'schedule':
+            log_dict['case_id'].append(case_id)
+            # items() returns <key, value> pairs of the attributes in the event
+            attrs = event.get_attributes().items()
+            for key, value in attrs:
+                if value.get_key() == 'concept:name':
+                    log_dict['concept:name'].append(value.get_value())
+                elif value.get_key() == 'time:timestamp':
+                    log_dict['time:timestamp'].append(value.get_value())
+                elif value.get_key() == 'lifecycle:transition':
+                    log_dict['lifecycle:transition'].append(value.get_value())
 
+log_df = pd.DataFrame(log_dict)
+print(log_df)
 
+output_file = "./data/output.csv"
+log_df.to_csv(output_file, index_label='index')
