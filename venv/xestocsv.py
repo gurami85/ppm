@@ -47,7 +47,8 @@ with open("./data/bpic2012_t100.xes") as file:
 
 
 log = logs[0]
-log_dict = {'case_id':[], 'concept:name':[], 'lifecycle:transition':[], 'time:timestamp':[]}
+log_dict = {'case_id':[], 'concept:name':[], 'lifecycle:transition':[],
+            'time:timestamp':[], 'case remaining time':[]}
 
 for trace in log:
     # extract the case id from the <trace> tag
@@ -62,12 +63,25 @@ for trace in log:
                 if value.get_key() == 'concept:name':
                     log_dict['concept:name'].append(value.get_value())
                 elif value.get_key() == 'time:timestamp':
-                    log_dict['time:timestamp'].append(value.get_value())
+                    cur_event_time = value.get_value()
+                    lst_event_time = trace[len(trace)-1].get_attributes()['time:timestamp'].get_value()
+                    # append the timestamp of current event
+                    log_dict['time:timestamp'].append(cur_event_time)
+                    # append the case remaining time (CRT)
+                    # CRT is calculated as difference between current and last events' timestamps
+                    log_dict['case remaining time'].append(lst_event_time - cur_event_time)
                 elif value.get_key() == 'lifecycle:transition':
                     log_dict['lifecycle:transition'].append(value.get_value())
 
 log_df = pd.DataFrame(log_dict)
+log_df.get_value(self, 0)
 print(log_df)
 
 output_file = "./data/output.csv"
 log_df.to_csv(output_file, index_label='index')
+
+# make a dataframe for the remaining time of each activity types
+# option 1: get info. from meta tags (not applicable in fragmented logs)
+# <insert codes...>
+# option 2: calculate and measure manually
+
