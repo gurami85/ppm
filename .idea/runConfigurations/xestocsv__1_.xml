@@ -7,7 +7,7 @@
       <env name="PYTHONUNBUFFERED" value="1" />
       <env name="PATH" value="C:\dev\anaconda3\envs\pytorch\Library\bin" />
     </envs>
-    <option name="SDK_HOME" value="C:\dev\anaconda3\envs\pytorch\python.exe" />
+    <option name="SDK_HOME" value="C:\Dev\Anaconda3\envs\practice\python.exe" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
