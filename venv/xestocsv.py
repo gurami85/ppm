@@ -1,25 +1,18 @@
-# make a csv file from an xes file for the remaining time prediction
-# reference: https://github.com/opyenxes/OpyenXes/tree/2018-bpm-demo/example
+# make a csv file from an xes file for storing general information of event logs
+# outputs
+#   (1) case_id (trace, concept:name)
+#   (2) extra trace's attributes
+#   (3) seq_of_event (by counting events in trace)
+#   (4) activity_type (event, concept:name)
+#   (5) lifecycle_type (event, lifecycle:transition)
+#   (6) timestamp (event, time:timestamp)
+#   (7) performer (event, org:resource)
+#   (8) extra event's attributes
 
 import pandas as pd
-import numpy as np
-import os, sys
-
 from opyenxes.extension.XExtensionParser import XExtensionParser
 from opyenxes.extension.XExtensionManager import XExtensionManager
 from opyenxes.data_in.XUniversalParser import XUniversalParser
-from opyenxes.model.XEvent import XEvent
-from opyenxes.model.XTrace import XTrace
-from opyenxes.model.XAttributeBoolean import XAttributeBoolean
-from opyenxes.model.XAttributeCollection import XAttributeCollection
-from opyenxes.model.XAttributeContainer import XAttributeContainer
-from opyenxes.model.XAttributeContinuous import XAttributeContinuous
-from opyenxes.model.XAttributeDiscrete import XAttributeDiscrete
-from opyenxes.model.XAttributeID import XAttributeID
-from opyenxes.model.XAttributeList import XAttributeList
-from opyenxes.model.XAttributeLiteral import XAttributeLiteral
-from opyenxes.model.XAttributeMap import XAttributeMap
-from opyenxes.model.XAttributeTimestamp import XAttributeTimestamp
 
 # We must parse the new extension, can be the link or the xml file
 print("[info] XExtensionParser starts the extension parsing")
@@ -42,97 +35,79 @@ XExtensionManager().register(ext_lifecycle)
 print("[info] XExtensionManager completed the registration of extensions")
 
 # Now we can parse
-with open("./data/bpic2012_t100.xes") as file:
+with open("./data/bpic2012.xes") as file:
     logs = XUniversalParser().parse(file)
 
 log = logs[0]
-log_dict = {'case_id':[], 'concept:name':[], 'lifecycle:transition':[],
-            'time:timestamp':[], 'case_remaining_time':[], 'num_of_antecedent_events':[]}
+trace_dict = {'case_id':[]}
+event_dict = {'case_id':[], 'seq_of_event':[], 'activity_type':[],
+              'resource_id':[], 'lifecycle_type':[], 'timestamp':[]}
 
-# extract basic information and make a data frame
+basic_attr_lst = ['concept:name', 'org:resource', 'lifecycle:transition', 'time:timestamp']
+trace_ext_attr_lst = []     # for extra attributes in traces
+event_ext_attr_lst = []     # for extra attributes in events
+
+# find extra attributes then add to dictionary
+trace = log[0]
+for key, value in trace.get_attributes().items():
+    if key not in basic_attr_lst:
+        trace_dict.update({key: []})
+        trace_ext_attr_lst.append(key)
+
+event = trace[0]
+for key, value in event.get_attributes().items():
+    if key not in basic_attr_lst:
+        event_dict.update({key: []})
+        event_ext_attr_lst.append(key)
+
+# extract attributes in event log
+# case1: all extra attributes are mandatory (equal length)
 for trace in log:
-    # extract the case id from the <trace> tag
+    i = 1   # counts events in a trace
+    seq_of_event = 1    # counts complete events in a trace
+    # extract the case id (common key between trace_dict and event_dict)
     case_id = trace.get_attributes()['concept:name'].get_value()
-    # variable for counting num. of antecedent events (num. of completed activities in a case)
-    num_of_antecedent_events = 0
+    trace_dict['case_id'].append(case_id)
+    for key in trace_ext_attr_lst:
+        trace_dict[key].append(trace.get_attributes()[key].get_value())
     for event in trace:
-        # except the event whose 'lifecycle:transition' is 'schedule'
+        # add extra attribute values from trace
+        event_dict['case_id'].append(case_id)
+        # extract the sequence of the event
+        event_dict['seq_of_event'].append(seq_of_event)
+        # extract the activity type of the event
+        activity_type = event.get_attributes()['concept:name'].get_value()
+        event_dict['activity_type'].append(activity_type)
+        # extract the resource id of the event (can be an empty value)
+        try:
+            resource_id = event.get_attributes()['org:resource'].get_value()
+            event_dict['resource_id'].append(resource_id)
+        except KeyError:
+            print("There is no 'org:resource' attribute in %dth event of trace '%s'" % (i, case_id))
+            event_dict['resource_id'].append(None)
+        # extract the lifecycle type of the event
         lifecycle_type = event.get_attributes()['lifecycle:transition'].get_value().lower()
-        if lifecycle_type != 'schedule':
-            log_dict['case_id'].append(case_id)
-            # items() returns <key, value> pairs of the attributes in the event
-            attrs = event.get_attributes().items()
-            for key, value in attrs:
-                if value.get_key() == 'concept:name':
-                    log_dict['concept:name'].append(value.get_value())
-                elif value.get_key() == 'time:timestamp':
-                    cur_event_time = value.get_value()
-                    lst_event_time = trace[len(trace)-1].get_attributes()['time:timestamp'].get_value()
-                    # append the timestamp of current event
-                    log_dict['time:timestamp'].append(cur_event_time)
-                    # append the case remaining time (CRT)
-                    # CRT is calculated as difference between current and last events' timestamps
-                    log_dict['case_remaining_time'].append(lst_event_time - cur_event_time)
-                elif value.get_key() == 'lifecycle:transition':
-                    log_dict['lifecycle:transition'].append(value.get_value())
-            log_dict['num_of_antecedent_events'].append(num_of_antecedent_events)
-            if lifecycle_type == 'complete':
-                num_of_antecedent_events += 1
+        # for counting complete events
+        if lifecycle_type == 'complete':
+            seq_of_event += 1
+        event_dict['lifecycle_type'].append(lifecycle_type)
+        # extract the timestamp of the event
+        timestamp = event.get_attributes()['time:timestamp'].get_value()
+        event_dict['timestamp'].append(timestamp)
+        # extract the event's extra attribute values
+        for key in event_ext_attr_lst:
+            event_dict[key].append(event.get_attributes()[key].get_value())
+        i += 1
 
-log_df = pd.DataFrame(log_dict)
-print(log_df)
+# case2: some extra attributes are optional (not equal length)
+# [!] we can write codes of this part when we meet corresponding situation.
 
-log_df.loc[log_df['lifecycle:transition'] == 'complete', ['num_of_antecedent_events']]
+# merge trace_dict and event_dict into dataframe
+trace_df = pd.DataFrame(trace_dict)
+event_df = pd.DataFrame(event_dict)
+df = pd.merge(trace_df, event_df, on='case_id')
+df.head()
 
-output_file = "./data/log_info.csv"
-log_df.to_csv(output_file, index_label='index')
-
-# make a data frame for the remaining time of each activity types
-# option 1: get info. from meta tags (not applicable in fragmented logs)
-# <insert codes...>
-# option 2: calculate and measure manually
-
-# measure frequencies for each activity (concept:name)
-# measure total sum of case remaining time for each activity
-freq_dict = dict()
-remaining_time_sum_dict = dict()
-for idx, row in log_df.iterrows():
-    concept_name = row['concept:name']
-    case_remaining_time = row['case_remaining_time']
-    # include only events whose 'lifecycle' is 'complete'
-    if row['lifecycle:transition'].lower() != 'complete':
-        continue
-    if concept_name in freq_dict:
-        freq_dict[concept_name] += 1
-        remaining_time_sum_dict[concept_name] += case_remaining_time
-    else:
-        freq_dict[concept_name] = 0
-        remaining_time_sum_dict[concept_name] = case_remaining_time
-
-print(freq_dict)
-print(remaining_time_sum_dict)
-
-# calculate averages of case remaining time (sec.) for each activity
-avg_crt_dict = dict()
-for key in freq_dict:
-    # get average of CRT
-    # total_seconds() converts Timedelta to seconds
-    avg_crt = (remaining_time_sum_dict[key] / freq_dict[key]).total_seconds()
-    avg_crt_dict[key] = avg_crt
-
-print(avg_crt_dict)
-
-# make a training dataset from ingredients (log_df, avg_crt_dict)
-training_dict = {'num_of_antecedent_events': [], 'avg_of_case_remaining_time': []}
-for idx, row in log_df.iterrows():
-    concept_name = row['concept:name']
-    # 1st feature: NAE (Num. of Antecedent Events)
-    nae = row['num_of_antecedent_events']
-    training_dict['num_of_antecedent_events'].append(nae)
-    # 2nd feature: Avg. CRT (Average of Case Remaining Time)
-    avg_crt = avg_crt_dict[concept_name]
-    training_dict['avg_of_case_remaining_time'].append(avg_crt)
-
-training_df = pd.DataFrame(training_dict)
-output_file = "./data/training_data.csv"
-training_df.to_csv(output_file, index=False)
+# outputs the csv file
+output_file = "./data/bpic2012.csv"
+df.to_csv(output_file, index=False)

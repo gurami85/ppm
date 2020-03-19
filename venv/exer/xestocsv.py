@@ -56,7 +56,7 @@ XExtensionManager().register(ext_lifecycle)
 
 # Now we can parse
 # with open("./data/review_example_large.xes") as file:
-with open("./data/bpic2012.xes.gz") as file:
+with open("../data/bpic2012.xes.gz") as file:
     log = XUniversalParser().parse(file)
 
 CASEID = 'caseid'
@@ -159,5 +159,5 @@ event_row_df['trace:concept:name'] = event_row_df['trace:concept:name'].astype(s
 
 event_row_df.head()
 
-output_file = "./data/output.csv"
+output_file = "../data/output.csv"
 event_row_df.to_csv(output_file, index_label=False)
