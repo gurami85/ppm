@@ -1,0 +1,702 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"339a678f-dff1-47de-9fdb-8cce004d7858\" name=\"Default Changelist\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/dictionaries/guram.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/cet_drift_detection.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_02.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_03.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_04.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_05.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_06.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_07.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_08.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_09.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_10.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_11.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_12.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_13.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_14.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_lstm_15.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/crt_prediction_nn.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/LB2000.xlsx\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/a10.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/commuters_test.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/commuters_train.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/monthly-sunspots.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/onehotenc_data.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/sales1.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/sales2.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/shampoo.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/test_store_item_demand.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/train_store_item_demand.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/data/wwwusage.csv\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/__init__.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/concept_drift_adwin.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/cross_validation.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/debugging.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/differencing.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/lstm_jessica/__init__.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/lstm_jessica/generate_data.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/lstm_jessica/lstm_timeseries_jessica.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/lstm_nlp_tagging.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/lstm_shham.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/lstm_timeseries_xbtusd.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/lstm_with_variable_sized_batches.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/mulvar-timeseries-varlen.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/one_hot_encoding.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/regression_demo01.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/resample.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/rnn.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/sarima.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/sequence_padding.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/sphagetti-plot.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/tbats01.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/tbats02.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/time_series_forecast.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/time_series_forecast_knu.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/time_series_forecast_schu.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/exer/univar_timeseries_vis.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/time_feature_extraction.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/xestocsv_cet.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/xestocsv_crt_01.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/venv/xestocsv_crt_02.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/ppm.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/ppm.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/runConfigurations/xestocsv__1_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/runConfigurations/xestocsv__1_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/venv/crt_prediction.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/venv/exer/test.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/venv/exer/xestocsv.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/venv/exer/xestocsv.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/venv/xestocsv.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/venv/xestocsv.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"EXCLUDED_CONVERTED_TO_IGNORED\" value=\"true\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FavoritesManager\">\r\n    <favorites_list name=\"ppm\" />\r\n  </component>\r\n  <component name=\"FileEditorManager\">\r\n    <leaf SIDE_TABS_SIZE_LIMIT_KEY=\"300\">\r\n      <file pinned=\"false\" current-in-tab=\"true\">\r\n        <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_15.py\">\r\n          <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n            <state relative-caret-position=\"515\">\r\n              <caret line=\"310\" column=\"35\" selection-start-line=\"310\" selection-start-column=\"35\" selection-end-line=\"310\" selection-end-column=\"35\" />\r\n            </state>\r\n          </provider>\r\n        </entry>\r\n      </file>\r\n    </leaf>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"FindInProjectRecents\">\r\n    <findStrings>\r\n      <find>padd</find>\r\n      <find>init_hidden</find>\r\n      <find>parting_event_idx</find>\r\n      <find>print</find>\r\n      <find>sequence</find>\r\n      <find>batch_first</find>\r\n      <find>check_input</find>\r\n      <find>check_forward_args</find>\r\n      <find>LSTM</find>\r\n      <find>first</find>\r\n      <find>resam</find>\r\n      <find>iqr</find>\r\n      <find>interpo</find>\r\n      <find>init_hiden</find>\r\n      <find>batch_size</find>\r\n      <find>EncoderRNN</find>\r\n      <find>cuda</find>\r\n      <find>event_idx</find>\r\n      <find>idx</find>\r\n      <find>&lt;trace&gt;</find>\r\n      <find>Scaler</find>\r\n      <find>cur_time</find>\r\n      <find>accumu</find>\r\n      <find>num_of_events</find>\r\n      <find>hdc</find>\r\n      <find>lambda</find>\r\n      <find>seq</find>\r\n      <find>seq_of_event</find>\r\n      <find>complete</find>\r\n      <find>traces_lens</find>\r\n    </findStrings>\r\n    <dirStrings>\r\n      <dir>C:\\Dev\\PyCharm\\workspace\\ppm</dir>\r\n    </dirStrings>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"IdeDocumentHistory\">\r\n    <option name=\"CHANGED_PATHS\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/venv/exer/tbats01.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/sarima.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/cross_validation.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/lstm_01.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/lstm_02.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_02.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/xestocsv_02.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/regression_demo01.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/cet_mv_avg.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/concept_drift_adwin.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/cet_drift_detection.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/data/bitmex/xbtusd_vwap.csv\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/lstm_xbtusd.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/data/onehotenc_data.csv\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/one_hot_encoding.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/xestocsv_crt_03.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/xestocsv.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/xestocsv_cet.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/xestocsv_crt_02.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/variable_sized_batches.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/sequence_padding.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/lstm_with_variable_sized_batches.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/lstm_pytorch_tutorial.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/lstm.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/lstm_jessica/generate_data.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/lstm_jessica/lstm_timeseries_jessica.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_02.py\" />\r\n        <option value=\"$USER_HOME$/Downloads/ipynb.py\" />\r\n        <option value=\"$PROJECT_DIR$/../../../Anaconda3/envs/pytorch/Lib/site-packages/torch/nn/modules/rnn.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_03.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_04.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_05.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/debugging.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/time_series_forecast.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/dayofweek.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/time_series_forecast_knu.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/tbats02.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/exer/time_series_forecast_schu.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_06.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_07.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/time_feature_extraction.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_08.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_09.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_10.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_11.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_12.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_13.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_14.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/xestocsv.py\" />\r\n        <option value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_15.py\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectFrameBounds\" extendedState=\"6\">\r\n    <option name=\"x\" value=\"-9\" />\r\n    <option name=\"width\" value=\"975\" />\r\n    <option name=\"height\" value=\"1029\" />\r\n  </component>\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectView\">\r\n    <navigator proportions=\"\" version=\"1\">\r\n      <foldersAlwaysOnTop value=\"true\" />\r\n    </navigator>\r\n    <panes>\r\n      <pane id=\"Scope\" />\r\n      <pane id=\"ProjectPane\">\r\n        <subPane>\r\n          <expand>\r\n            <path>\r\n              <item name=\"ppm\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"ppm\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"ppm\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"ppm\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"venv\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"ppm\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"ppm\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"venv\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"exer\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n          </expand>\r\n          <select />\r\n        </subPane>\r\n      </pane>\r\n    </panes>\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/venv\" />\r\n    <property name=\"run.code.analysis.last.selected.profile\" value=\"pProject Default\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Dev\\PyCharm\\workspace\\ppm\\venv\" />\r\n      <recent name=\"C:\\Dev\\PyCharm\\workspace\\ppm\\venv\\exer\" />\r\n      <recent name=\"C:\\Dev\\PyCharm\\workspace\\ppm\\venv\\data\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Dev\\PyCharm\\workspace\\ppm\\venv\\exer\\lstm_jessica\" />\r\n      <recent name=\"C:\\Dev\\PyCharm\\workspace\\ppm\\venv\\data\\bitmex\" />\r\n      <recent name=\"C:\\Dev\\PyCharm\\workspace\\ppm\\venv\\data\" />\r\n      <recent name=\"C:\\Dev\\PyCharm\\workspace\\ppm\\venv\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"ruleStates\">\r\n      <list>\r\n        <RuleState>\r\n          <option name=\"name\" value=\"ConfigurationTypeDashboardGroupingRule\" />\r\n        </RuleState>\r\n        <RuleState>\r\n          <option name=\"name\" value=\"StatusDashboardGroupingRule\" />\r\n        </RuleState>\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.crt_prediction_lstm_12\">\r\n    <configuration name=\"crt_prediction_lstm_02\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\">\r\n      <module name=\"ppm\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/venv\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_02.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"crt_prediction_lstm_03\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\">\r\n      <module name=\"ppm\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/venv\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_03.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"crt_prediction_lstm_06\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\">\r\n      <module name=\"ppm\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/venv\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_06.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"crt_prediction_lstm_12\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\">\r\n      <module name=\"ppm\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/venv\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/venv/crt_prediction_lstm_12.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"debugging\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\">\r\n      <module name=\"ppm\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/venv/exer\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/venv/exer/debugging.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Python.crt_prediction_lstm_02\" />\r\n      <item itemvalue=\"Python.crt_prediction_lstm_03\" />\r\n      <item itemvalue=\"Python.crt_prediction_lstm_06\" />\r\n      <item itemvalue=\"Python.crt_prediction_lstm_12\" />\r\n      <item itemvalue=\"Python.debugging\" />\r\n      <item itemvalue=\"Python.xesparsing_demo01\" />\r\n      <item itemvalue=\"Python.xestocsv (1)\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.crt_prediction_lstm_12\" />\r\n        <item itemvalue=\"Python.crt_prediction_lstm_06\" />\r\n        <item itemvalue=\"Python.debugging\" />\r\n        <item itemvalue=\"Python.crt_prediction_lstm_03\" />\r\n        <item itemvalue=\"Python.crt_prediction_lstm_02\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"339a678f-dff1-47de-9fdb-8cce004d7858\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1565831132170</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1565831132170</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"update xestocsv.py\">\r\n      <created>1565929910448</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1565929910448</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"update xestocsv.py\">\r\n      <created>1565930951899</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1565930951899</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"update xestocsv.py\">\r\n      <created>1566171922520</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1566171922520</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"update xestocsv.py\">\r\n      <created>1566277928652</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1566277928652</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TodoView\">\r\n    <todo-panel id=\"selected-file\">\r\n      <is-autoscroll-to-source value=\"true\" />\r\n    </todo-panel>\r\n    <todo-panel id=\"all\">\r\n      <are-packages-shown value=\"true\" />\r\n      <is-autoscroll-to-source value=\"true\" />\r\n    </todo-panel>\r\n  </component>\r\n  <component name=\"ToolWindowManager\">\r\n    <frame x=\"-7\" y=\"-7\" width=\"2575\" height=\"1415\" extended-state=\"6\" />\r\n    <layout>\r\n      <window_info content_ui=\"combo\" id=\"Project\" order=\"0\" sideWeight=\"0.4945055\" visible=\"true\" weight=\"0.11224892\" />\r\n      <window_info id=\"Structure\" order=\"1\" sideWeight=\"0.5025773\" side_tool=\"true\" weight=\"0.21383148\" />\r\n      <window_info id=\"Favorites\" order=\"2\" sideWeight=\"0.50549453\" side_tool=\"true\" weight=\"0.06836248\" />\r\n      <window_info anchor=\"bottom\" id=\"Message\" order=\"0\" />\r\n      <window_info anchor=\"bottom\" id=\"Find\" order=\"1\" weight=\"0.100549884\" />\r\n      <window_info anchor=\"bottom\" id=\"Run\" order=\"2\" sideWeight=\"0.4988086\" weight=\"0.1396648\" />\r\n      <window_info anchor=\"bottom\" id=\"Debug\" order=\"3\" weight=\"0.39964476\" />\r\n      <window_info anchor=\"bottom\" id=\"Cvs\" order=\"4\" weight=\"0.25\" />\r\n      <window_info anchor=\"bottom\" id=\"Inspection\" order=\"5\" weight=\"0.4\" />\r\n      <window_info anchor=\"bottom\" id=\"TODO\" order=\"6\" weight=\"0.3285968\" />\r\n      <window_info anchor=\"bottom\" id=\"Version Control\" order=\"7\" weight=\"0.3285968\" />\r\n      <window_info active=\"true\" anchor=\"bottom\" id=\"Terminal\" order=\"8\" visible=\"true\" weight=\"0.087509945\" />\r\n      <window_info anchor=\"bottom\" id=\"Event Log\" order=\"9\" sideWeight=\"0.50119144\" side_tool=\"true\" weight=\"0.3047545\" />\r\n      <window_info anchor=\"bottom\" id=\"Python Console\" order=\"10\" weight=\"0.32076985\" />\r\n      <window_info anchor=\"right\" id=\"Commander\" internal_type=\"SLIDING\" order=\"0\" type=\"SLIDING\" weight=\"0.4\" />\r\n      <window_info anchor=\"right\" id=\"Ant Build\" order=\"1\" weight=\"0.25\" />\r\n      <window_info anchor=\"right\" content_ui=\"combo\" id=\"Hierarchy\" order=\"2\" weight=\"0.25\" />\r\n    </layout>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"update xestocsv.py\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"update xestocsv.py\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/venv/exer/mulvar-timeseries-varlen.py</url>\r\n          <line>19</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/venv/crt_prediction_lstm.py</url>\r\n          <line>94</line>\r\n          <option name=\"timeStamp\" value=\"13\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/venv/crt_prediction_lstm.py</url>\r\n          <line>95</line>\r\n          <option name=\"timeStamp\" value=\"14\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/../../../Anaconda3/envs/pytorch/Lib/site-packages/torch/nn/modules/rnn.py</url>\r\n          <line>699</line>\r\n          <option name=\"timeStamp\" value=\"16\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/../../../Anaconda3/envs/pytorch/Lib/site-packages/torch/nn/modules/rnn.py</url>\r\n          <line>700</line>\r\n          <option name=\"timeStamp\" value=\"17\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/venv/crt_prediction_lstm.py</url>\r\n          <line>102</line>\r\n          <option name=\"timeStamp\" value=\"22\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/venv/crt_prediction_lstm.py</url>\r\n          <line>103</line>\r\n          <option name=\"timeStamp\" value=\"23\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/../../../Anaconda3/envs/pytorch/Lib/site-packages/torch/nn/modules/rnn.py</url>\r\n          <line>892</line>\r\n          <option name=\"timeStamp\" value=\"27\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/venv/crt_prediction_lstm_02.py</url>\r\n          <line>133</line>\r\n          <option name=\"timeStamp\" value=\"30\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/venv/exer/debugging.py</url>\r\n          <line>15</line>\r\n          <option name=\"timeStamp\" value=\"34\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/venv/exer/debugging.py</url>\r\n          <line>22</line>\r\n          <option name=\"timeStamp\" value=\"35\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/venv/crt_prediction_lstm_10.py</url>\r\n          <line>218</line>\r\n          <option name=\"timeStamp\" value=\"38\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n    <watches-manager>\r\n      <configuration name=\"PythonConfigurationType\">\r\n        <watch expression=\"input\" language=\"Python\" />\r\n      </configuration>\r\n    </watches-manager>\r\n  </component>\r\n  <component name=\"debuggerHistoryManager\">\r\n    <expressions id=\"breakpointCondition\">\r\n      <expression>\r\n        <expression-string>i%2==1</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n    </expressions>\r\n    <expressions id=\"watch\">\r\n      <expression>\r\n        <expression-string>input</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n      <expression>\r\n        <expression-string>input.size()</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n      <expression>\r\n        <expression-string>var4</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n      <expression>\r\n        <expression-string>var3</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n      <expression>\r\n        <expression-string>var2</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n      <expression>\r\n        <expression-string>var1</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n      <expression>\r\n        <expression-string>var2[i]</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n    </expressions>\r\n    <expressions id=\"evaluateExpression\">\r\n      <expression>\r\n        <expression-string>input[0].shape</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n      <expression>\r\n        <expression-string>input[0]</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n      <expression>\r\n        <expression-string>input.shape</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n      <expression>\r\n        <expression-string>type(input)</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n      <expression>\r\n        <expression-string>input.size()</expression-string>\r\n        <language-id>Python</language-id>\r\n        <evaluation-mode>EXPRESSION</evaluation-mode>\r\n      </expression>\r\n    </expressions>\r\n  </component>\r\n  <component name=\"editorHistoryManager\">\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/xestocsv.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"924\">\r\n          <caret line=\"106\" column=\"19\" lean-forward=\"true\" selection-start-line=\"106\" selection-start-column=\"19\" selection-end-line=\"106\" selection-end-column=\"19\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/data/bpic2012_fs1.csv\">\r\n      <provider selected=\"true\" editor-type-id=\"csv-text-editor\" />\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/xestocsv_crt_01.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"48\">\r\n          <caret line=\"31\" column=\"10\" selection-start-line=\"31\" selection-start-column=\"10\" selection-end-line=\"31\" selection-end-column=\"10\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/univar_timeseries_vis.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"352\">\r\n          <caret line=\"22\" column=\"19\" selection-start-line=\"22\" selection-start-column=\"19\" selection-end-line=\"22\" selection-end-column=\"19\" />\r\n          <folding>\r\n            <element signature=\"e#0#19#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/data/onehotenc_data.csv\">\r\n      <provider editor-type-id=\"csv-table-editor\">\r\n        <state showInfoPanel=\"true\" fixedHeaders=\"false\" rowLines=\"3\" />\r\n      </provider>\r\n      <provider selected=\"true\" editor-type-id=\"csv-text-editor\">\r\n        <state relative-caret-position=\"160\">\r\n          <caret line=\"10\" column=\"2\" selection-start-line=\"10\" selection-start-column=\"2\" selection-end-line=\"10\" selection-end-column=\"2\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/one_hot_encoding.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"192\">\r\n          <caret line=\"12\" selection-start-line=\"12\" selection-end-line=\"12\" selection-end-column=\"37\" />\r\n          <folding>\r\n            <element signature=\"e#0#19#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/cet_drift_detection.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"128\">\r\n          <caret line=\"10\" column=\"11\" lean-forward=\"true\" selection-start-line=\"10\" selection-start-column=\"11\" selection-end-line=\"10\" selection-end-column=\"11\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/sequence_padding.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"-553\">\r\n          <caret line=\"7\" column=\"16\" lean-forward=\"true\" selection-start-line=\"7\" selection-start-column=\"16\" selection-end-line=\"7\" selection-end-column=\"16\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/rnn.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"-477\">\r\n          <caret line=\"660\" column=\"35\" lean-forward=\"true\" selection-start-line=\"660\" selection-start-column=\"35\" selection-end-line=\"660\" selection-end-column=\"35\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/lstm_jessica/generate_data.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"-1227\">\r\n          <caret line=\"13\" column=\"31\" selection-start-line=\"13\" selection-start-column=\"31\" selection-end-line=\"13\" selection-end-column=\"31\" />\r\n          <folding>\r\n            <element signature=\"e#163#181#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$USER_HOME$/Downloads/ipynb.py\" />\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/lstm_jessica/lstm_timeseries_jessica.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"16\">\r\n          <caret line=\"1\" selection-start-line=\"1\" selection-end-line=\"1\" selection-end-column=\"105\" />\r\n          <folding>\r\n            <element signature=\"e#175#187#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_03.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"192\">\r\n          <caret line=\"19\" lean-forward=\"true\" selection-start-line=\"19\" selection-end-line=\"19\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"2464\">\r\n          <caret line=\"154\" column=\"19\" lean-forward=\"true\" selection-start-line=\"154\" selection-start-column=\"19\" selection-end-line=\"154\" selection-end-column=\"19\" />\r\n          <folding>\r\n            <element signature=\"e#136#155#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/lstm_nlp_tagging.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"193\">\r\n          <caret line=\"25\" column=\"19\" selection-start-line=\"25\" selection-start-column=\"19\" selection-end-line=\"25\" selection-end-column=\"19\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/lstm_with_variable_sized_batches.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"193\">\r\n          <caret line=\"41\" column=\"23\" selection-start-line=\"41\" selection-start-column=\"18\" selection-end-line=\"41\" selection-end-column=\"23\" />\r\n          <folding>\r\n            <element signature=\"e#0#12#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/debugging.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"64\">\r\n          <caret line=\"13\" column=\"30\" lean-forward=\"true\" selection-start-line=\"13\" selection-start-column=\"30\" selection-end-line=\"13\" selection-end-column=\"30\" />\r\n          <folding>\r\n            <element signature=\"e#0#31#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/../../../Anaconda3/envs/pytorch/Lib/site-packages/torch/nn/modules/rnn.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"481\">\r\n          <caret line=\"490\" column=\"27\" selection-start-line=\"490\" selection-start-column=\"27\" selection-end-line=\"490\" selection-end-column=\"27\" />\r\n          <folding>\r\n            <element signature=\"e#0#11#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_02.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"176\">\r\n          <caret line=\"27\" column=\"27\" selection-start-line=\"27\" selection-start-column=\"27\" selection-end-line=\"27\" selection-end-column=\"27\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/resample.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"96\">\r\n          <caret line=\"6\" lean-forward=\"true\" selection-start-line=\"6\" selection-end-line=\"6\" />\r\n          <folding>\r\n            <element signature=\"e#0#27#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/data/commuters_train_knu.csv\" />\r\n    <entry file=\"file://$PROJECT_DIR$/venv/data/commuters_train.csv\">\r\n      <provider editor-type-id=\"csv-table-editor\">\r\n        <state showInfoPanel=\"true\" fixedHeaders=\"false\" rowLines=\"3\" />\r\n      </provider>\r\n      <provider selected=\"true\" editor-type-id=\"csv-text-editor\">\r\n        <state relative-caret-position=\"-29495\">\r\n          <caret line=\"19\" column=\"21\" lean-forward=\"true\" selection-start-line=\"19\" selection-start-column=\"21\" selection-end-line=\"19\" selection-end-column=\"21\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/time_series_forecast.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"272\">\r\n          <caret line=\"92\" lean-forward=\"true\" selection-start-line=\"92\" selection-end-line=\"92\" />\r\n          <folding>\r\n            <element signature=\"e#0#19#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/sarima.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"192\">\r\n          <caret line=\"60\" selection-start-line=\"60\" selection-end-line=\"60\" />\r\n          <folding>\r\n            <element signature=\"e#0#19#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_06_bak.py\" />\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/time_series_forecast_knu.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"-1584\">\r\n          <caret column=\"19\" lean-forward=\"true\" selection-start-column=\"19\" selection-end-column=\"19\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/tbats01.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"438\">\r\n          <caret line=\"29\" column=\"10\" selection-start-line=\"29\" selection-start-column=\"10\" selection-end-line=\"29\" selection-end-column=\"10\" />\r\n          <folding>\r\n            <element signature=\"e#0#19#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/tbats02.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"272\">\r\n          <caret line=\"17\" column=\"27\" selection-start-line=\"17\" selection-start-column=\"27\" selection-end-line=\"17\" selection-end-column=\"27\" />\r\n          <folding>\r\n            <element signature=\"e#0#19#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/lstm_timeseries_xbtusd.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"248\">\r\n          <caret line=\"252\" lean-forward=\"true\" selection-start-line=\"252\" selection-end-line=\"252\" />\r\n          <folding>\r\n            <element signature=\"e#0#36#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/time_series_forecast_schu.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"480\">\r\n          <caret line=\"36\" column=\"34\" selection-start-line=\"36\" selection-start-column=\"34\" selection-end-line=\"36\" selection-end-column=\"34\" />\r\n          <folding>\r\n            <element signature=\"e#0#19#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/exer/lstm_shham.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state>\r\n          <caret line=\"20\" column=\"28\" selection-start-line=\"20\" selection-start-column=\"28\" selection-end-line=\"20\" selection-end-column=\"28\" />\r\n          <folding>\r\n            <element signature=\"e#0#12#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_07_bak.py\" />\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_07.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"207\">\r\n          <caret line=\"27\" lean-forward=\"true\" selection-start-line=\"27\" selection-end-line=\"27\" />\r\n          <folding>\r\n            <element signature=\"e#261#280#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_08.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"359\">\r\n          <caret line=\"167\" column=\"22\" lean-forward=\"true\" selection-start-line=\"167\" selection-start-column=\"22\" selection-end-line=\"167\" selection-end-column=\"22\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_06.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"138\">\r\n          <caret line=\"6\" selection-start-line=\"6\" selection-end-line=\"6\" selection-end-column=\"98\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_04.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"3910\">\r\n          <caret line=\"177\" column=\"40\" lean-forward=\"true\" selection-start-line=\"177\" selection-start-column=\"40\" selection-end-line=\"177\" selection-end-column=\"40\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_05.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"1380\">\r\n          <caret line=\"193\" column=\"25\" lean-forward=\"true\" selection-start-line=\"193\" selection-start-column=\"25\" selection-end-line=\"193\" selection-end-column=\"25\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/data/bpic2012.xes\">\r\n      <provider selected=\"true\" editor-type-id=\"LargeFileEditor\">\r\n        <state>\r\n          <caret column=\"1\" selection-start-column=\"1\" selection-end-column=\"1\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_09.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"184\">\r\n          <caret line=\"37\" column=\"49\" selection-start-line=\"37\" selection-start-column=\"49\" selection-end-line=\"37\" selection-end-column=\"49\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_10.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"207\">\r\n          <caret line=\"32\" column=\"45\" selection-start-line=\"32\" selection-start-column=\"45\" selection-end-line=\"32\" selection-end-column=\"45\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_11.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"299\">\r\n          <caret line=\"39\" column=\"50\" lean-forward=\"true\" selection-start-line=\"39\" selection-start-column=\"50\" selection-end-line=\"39\" selection-end-column=\"50\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_12.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"35\">\r\n          <caret line=\"225\" column=\"42\" selection-start-line=\"225\" selection-start-column=\"42\" selection-end-line=\"225\" selection-end-column=\"42\" />\r\n          <folding>\r\n            <element signature=\"e#434#453#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_13.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"194\">\r\n          <caret line=\"175\" column=\"1\" selection-start-line=\"175\" selection-start-column=\"1\" selection-end-line=\"175\" selection-end-column=\"1\" />\r\n          <folding>\r\n            <element signature=\"e#434#453#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_14.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"92\">\r\n          <caret line=\"4\" column=\"25\" selection-start-line=\"4\" selection-start-column=\"25\" selection-end-line=\"4\" selection-end-column=\"25\" />\r\n          <folding>\r\n            <element signature=\"e#371#390#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/xestocsv_cet.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"-263\">\r\n          <caret line=\"20\" column=\"34\" lean-forward=\"true\" selection-start-line=\"20\" selection-start-column=\"34\" selection-end-line=\"20\" selection-end-column=\"34\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/time_feature_extraction.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"529\">\r\n          <caret line=\"25\" column=\"50\" selection-start-line=\"25\" selection-start-column=\"50\" selection-end-line=\"25\" selection-end-column=\"50\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/xestocsv_crt_02.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"230\">\r\n          <caret line=\"14\" column=\"30\" selection-start-line=\"14\" selection-start-column=\"30\" selection-end-line=\"14\" selection-end-column=\"30\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/xestocsv.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"1025\">\r\n          <caret line=\"113\" selection-start-line=\"113\" selection-end-line=\"113\" />\r\n          <folding>\r\n            <element signature=\"e#426#445#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/data/bpic2012.csv\">\r\n      <provider selected=\"true\" editor-type-id=\"csv-text-editor\">\r\n        <state relative-caret-position=\"276\">\r\n          <caret line=\"12\" column=\"47\" lean-forward=\"true\" selection-start-line=\"12\" selection-start-column=\"47\" selection-end-line=\"12\" selection-end-column=\"47\" />\r\n        </state>\r\n      </provider>\r\n      <provider editor-type-id=\"LargeFileEditor\">\r\n        <state relative-caret-position=\"299\">\r\n          <caret line=\"13\" column=\"49\" lean-forward=\"true\" selection-start-line=\"13\" selection-start-column=\"49\" selection-end-line=\"13\" selection-end-column=\"49\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_nn.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"2120\">\r\n          <caret line=\"113\" column=\"10\" lean-forward=\"true\" selection-start-line=\"113\" selection-start-column=\"10\" selection-end-line=\"113\" selection-end-column=\"10\" />\r\n          <folding>\r\n            <element signature=\"e#186#205#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/venv/crt_prediction_lstm_15.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"515\">\r\n          <caret line=\"310\" column=\"35\" selection-start-line=\"310\" selection-start-column=\"35\" selection-end-line=\"310\" selection-end-column=\"35\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision c5ea686b1abf60e18669f74fab49e65da22caa56)
++++ .idea/workspace.xml	(date 1585189548276)
+@@ -1,97 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="339a678f-dff1-47de-9fdb-8cce004d7858" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/guram.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/cet_drift_detection.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_02.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_03.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_04.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_05.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_06.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_07.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_08.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_09.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_10.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_11.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_12.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_13.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_14.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_lstm_15.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/crt_prediction_nn.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/LB2000.xlsx" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/a10.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/commuters_test.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/commuters_train.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/monthly-sunspots.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/onehotenc_data.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/sales1.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/sales2.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/shampoo.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/test_store_item_demand.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/train_store_item_demand.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/data/wwwusage.csv" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/__init__.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/concept_drift_adwin.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/cross_validation.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/debugging.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/differencing.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/lstm_jessica/__init__.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/lstm_jessica/generate_data.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/lstm_jessica/lstm_timeseries_jessica.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/lstm_nlp_tagging.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/lstm_shham.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/lstm_timeseries_xbtusd.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/lstm_with_variable_sized_batches.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/mulvar-timeseries-varlen.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/one_hot_encoding.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/regression_demo01.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/resample.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/rnn.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/sarima.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/sequence_padding.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/sphagetti-plot.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/tbats01.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/tbats02.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/time_series_forecast.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/time_series_forecast_knu.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/time_series_forecast_schu.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/exer/univar_timeseries_vis.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/time_feature_extraction.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/xestocsv_cet.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/xestocsv_crt_01.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/venv/xestocsv_crt_02.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/ppm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ppm.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/xestocsv__1_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/xestocsv__1_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/venv/crt_prediction.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/venv/exer/test.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/venv/exer/xestocsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/exer/xestocsv.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/venv/xestocsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/xestocsv.py" afterDir="false" />
++    <list default="true" id="339a678f-dff1-47de-9fdb-8cce004d7858" name="Default Changelist" comment="update xestocsv.py">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+-  <component name="FavoritesManager">
+-    <favorites_list name="ppm" />
+-  </component>
+-  <component name="FileEditorManager">
+-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+-      <file pinned="false" current-in-tab="true">
+-        <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_15.py">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="515">
+-              <caret line="310" column="35" selection-start-line="310" selection-start-column="35" selection-end-line="310" selection-end-column="35" />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-    </leaf>
+-  </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+@@ -137,102 +54,15 @@
+     </dirStrings>
+   </component>
+   <component name="Git.Settings">
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="IdeDocumentHistory">
+-    <option name="CHANGED_PATHS">
+-      <list>
+-        <option value="$PROJECT_DIR$/venv/exer/tbats01.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/sarima.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/cross_validation.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/lstm_01.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/lstm_02.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_02.py" />
+-        <option value="$PROJECT_DIR$/venv/xestocsv_02.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/regression_demo01.py" />
+-        <option value="$PROJECT_DIR$/venv/cet_mv_avg.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/concept_drift_adwin.py" />
+-        <option value="$PROJECT_DIR$/venv/cet_drift_detection.py" />
+-        <option value="$PROJECT_DIR$/venv/data/bitmex/xbtusd_vwap.csv" />
+-        <option value="$PROJECT_DIR$/venv/exer/lstm_xbtusd.py" />
+-        <option value="$PROJECT_DIR$/venv/data/onehotenc_data.csv" />
+-        <option value="$PROJECT_DIR$/venv/exer/one_hot_encoding.py" />
+-        <option value="$PROJECT_DIR$/venv/xestocsv_crt_03.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/xestocsv.py" />
+-        <option value="$PROJECT_DIR$/venv/xestocsv_cet.py" />
+-        <option value="$PROJECT_DIR$/venv/xestocsv_crt_02.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/variable_sized_batches.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/sequence_padding.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/lstm_with_variable_sized_batches.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/lstm_pytorch_tutorial.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/lstm.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/lstm_jessica/generate_data.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/lstm_jessica/lstm_timeseries_jessica.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_02.py" />
+-        <option value="$USER_HOME$/Downloads/ipynb.py" />
+-        <option value="$PROJECT_DIR$/../../../Anaconda3/envs/pytorch/Lib/site-packages/torch/nn/modules/rnn.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_03.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_04.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_05.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/debugging.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/time_series_forecast.py" />
+-        <option value="$PROJECT_DIR$/venv/dayofweek.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/time_series_forecast_knu.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/tbats02.py" />
+-        <option value="$PROJECT_DIR$/venv/exer/time_series_forecast_schu.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_06.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_07.py" />
+-        <option value="$PROJECT_DIR$/venv/time_feature_extraction.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_08.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_09.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_10.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_11.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_12.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_13.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_14.py" />
+-        <option value="$PROJECT_DIR$/venv/xestocsv.py" />
+-        <option value="$PROJECT_DIR$/venv/crt_prediction_lstm_15.py" />
+-      </list>
+-    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../kepri" />
+   </component>
+   <component name="ProjectFrameBounds" extendedState="6">
+     <option name="x" value="-9" />
+     <option name="width" value="975" />
+     <option name="height" value="1029" />
+   </component>
+-  <component name="ProjectLevelVcsManager">
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+     <ConfirmationsSetting value="2" id="Add" />
+-  </component>
+-  <component name="ProjectView">
+-    <navigator proportions="" version="1">
+-      <foldersAlwaysOnTop value="true" />
+-    </navigator>
+-    <panes>
+-      <pane id="Scope" />
+-      <pane id="ProjectPane">
+-        <subPane>
+-          <expand>
+-            <path>
+-              <item name="ppm" type="b2602c69:ProjectViewProjectNode" />
+-              <item name="ppm" type="462c0819:PsiDirectoryNode" />
+-            </path>
+-            <path>
+-              <item name="ppm" type="b2602c69:ProjectViewProjectNode" />
+-              <item name="ppm" type="462c0819:PsiDirectoryNode" />
+-              <item name="venv" type="462c0819:PsiDirectoryNode" />
+-            </path>
+-            <path>
+-              <item name="ppm" type="b2602c69:ProjectViewProjectNode" />
+-              <item name="ppm" type="462c0819:PsiDirectoryNode" />
+-              <item name="venv" type="462c0819:PsiDirectoryNode" />
+-              <item name="exer" type="462c0819:PsiDirectoryNode" />
+-            </path>
+-          </expand>
+-          <select />
+-        </subPane>
+-      </pane>
+-    </panes>
+   </component>
+   <component name="PropertiesComponent">
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+@@ -253,18 +83,6 @@
+       <recent name="C:\Dev\PyCharm\workspace\ppm\venv" />
+     </key>
+   </component>
+-  <component name="RunDashboard">
+-    <option name="ruleStates">
+-      <list>
+-        <RuleState>
+-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+-        </RuleState>
+-        <RuleState>
+-          <option name="name" value="StatusDashboardGroupingRule" />
+-        </RuleState>
+-      </list>
+-    </option>
+-  </component>
+   <component name="RunManager" selected="Python.crt_prediction_lstm_12">
+     <configuration name="crt_prediction_lstm_02" type="PythonConfigurationType" factoryName="Python" temporary="true">
+       <module name="ppm" />
+@@ -372,13 +190,13 @@
+       <method v="2" />
+     </configuration>
+     <list>
++      <item itemvalue="Python.general_run" />
++      <item itemvalue="Python.xesparsing_demo01" />
+       <item itemvalue="Python.crt_prediction_lstm_02" />
+       <item itemvalue="Python.crt_prediction_lstm_03" />
+       <item itemvalue="Python.crt_prediction_lstm_06" />
+       <item itemvalue="Python.crt_prediction_lstm_12" />
+       <item itemvalue="Python.debugging" />
+-      <item itemvalue="Python.xesparsing_demo01" />
+-      <item itemvalue="Python.xestocsv (1)" />
+     </list>
+     <recent_temporary>
+       <list>
+@@ -440,32 +258,16 @@
+       <are-packages-shown value="true" />
+       <is-autoscroll-to-source value="true" />
+     </todo-panel>
+-  </component>
+-  <component name="ToolWindowManager">
+-    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
+-    <layout>
+-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4945055" visible="true" weight="0.11224892" />
+-      <window_info id="Structure" order="1" sideWeight="0.5025773" side_tool="true" weight="0.21383148" />
+-      <window_info id="Favorites" order="2" sideWeight="0.50549453" side_tool="true" weight="0.06836248" />
+-      <window_info anchor="bottom" id="Message" order="0" />
+-      <window_info anchor="bottom" id="Find" order="1" weight="0.100549884" />
+-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4988086" weight="0.1396648" />
+-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
+-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
+-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3285968" />
+-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.087509945" />
+-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50119144" side_tool="true" weight="0.3047545" />
+-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32076985" />
+-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+-    </layout>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="update xestocsv.py" />
+     <option name="LAST_COMMIT_MESSAGE" value="update xestocsv.py" />
++  </component>
++  <component name="WindowStateProjectService">
++    <state x="931" y="209" key="CommitChangelistDialog2" timestamp="1585189503842">
++      <screen x="0" y="0" width="2560" height="1400" />
++    </state>
++    <state x="931" y="209" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1585189503842" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -611,412 +413,4 @@
+       </expression>
+     </expressions>
+   </component>
+-  <component name="editorHistoryManager">
+-    <entry file="file://$PROJECT_DIR$/venv/exer/xestocsv.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="924">
+-          <caret line="106" column="19" lean-forward="true" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/data/bpic2012_fs1.csv">
+-      <provider selected="true" editor-type-id="csv-text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/xestocsv_crt_01.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="48">
+-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/univar_timeseries_vis.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="352">
+-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+-          <folding>
+-            <element signature="e#0#19#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/data/onehotenc_data.csv">
+-      <provider editor-type-id="csv-table-editor">
+-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+-      </provider>
+-      <provider selected="true" editor-type-id="csv-text-editor">
+-        <state relative-caret-position="160">
+-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/one_hot_encoding.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="192">
+-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="37" />
+-          <folding>
+-            <element signature="e#0#19#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/cet_drift_detection.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="128">
+-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/sequence_padding.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="-553">
+-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/rnn.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="-477">
+-          <caret line="660" column="35" lean-forward="true" selection-start-line="660" selection-start-column="35" selection-end-line="660" selection-end-column="35" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/lstm_jessica/generate_data.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="-1227">
+-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+-          <folding>
+-            <element signature="e#163#181#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$USER_HOME$/Downloads/ipynb.py" />
+-    <entry file="file://$PROJECT_DIR$/venv/exer/lstm_jessica/lstm_timeseries_jessica.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="16">
+-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="105" />
+-          <folding>
+-            <element signature="e#175#187#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_03.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="192">
+-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="2464">
+-          <caret line="154" column="19" lean-forward="true" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
+-          <folding>
+-            <element signature="e#136#155#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/lstm_nlp_tagging.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="193">
+-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/lstm_with_variable_sized_batches.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="193">
+-          <caret line="41" column="23" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="23" />
+-          <folding>
+-            <element signature="e#0#12#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/debugging.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="64">
+-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+-          <folding>
+-            <element signature="e#0#31#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/../../../Anaconda3/envs/pytorch/Lib/site-packages/torch/nn/modules/rnn.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="481">
+-          <caret line="490" column="27" selection-start-line="490" selection-start-column="27" selection-end-line="490" selection-end-column="27" />
+-          <folding>
+-            <element signature="e#0#11#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_02.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="176">
+-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/resample.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="96">
+-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+-          <folding>
+-            <element signature="e#0#27#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/data/commuters_train_knu.csv" />
+-    <entry file="file://$PROJECT_DIR$/venv/data/commuters_train.csv">
+-      <provider editor-type-id="csv-table-editor">
+-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+-      </provider>
+-      <provider selected="true" editor-type-id="csv-text-editor">
+-        <state relative-caret-position="-29495">
+-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/time_series_forecast.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="272">
+-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+-          <folding>
+-            <element signature="e#0#19#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/sarima.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="192">
+-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+-          <folding>
+-            <element signature="e#0#19#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_06_bak.py" />
+-    <entry file="file://$PROJECT_DIR$/venv/exer/time_series_forecast_knu.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="-1584">
+-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/tbats01.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="438">
+-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+-          <folding>
+-            <element signature="e#0#19#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/tbats02.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="272">
+-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+-          <folding>
+-            <element signature="e#0#19#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/lstm_timeseries_xbtusd.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="248">
+-          <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="252" />
+-          <folding>
+-            <element signature="e#0#36#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/time_series_forecast_schu.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="480">
+-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+-          <folding>
+-            <element signature="e#0#19#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/exer/lstm_shham.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state>
+-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+-          <folding>
+-            <element signature="e#0#12#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_07_bak.py" />
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_07.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="207">
+-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+-          <folding>
+-            <element signature="e#261#280#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_08.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="359">
+-          <caret line="167" column="22" lean-forward="true" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_06.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="138">
+-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="98" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_04.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="3910">
+-          <caret line="177" column="40" lean-forward="true" selection-start-line="177" selection-start-column="40" selection-end-line="177" selection-end-column="40" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_05.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="1380">
+-          <caret line="193" column="25" lean-forward="true" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/data/bpic2012.xes">
+-      <provider selected="true" editor-type-id="LargeFileEditor">
+-        <state>
+-          <caret column="1" selection-start-column="1" selection-end-column="1" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_09.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="184">
+-          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_10.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="207">
+-          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_11.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="299">
+-          <caret line="39" column="50" lean-forward="true" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_12.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="35">
+-          <caret line="225" column="42" selection-start-line="225" selection-start-column="42" selection-end-line="225" selection-end-column="42" />
+-          <folding>
+-            <element signature="e#434#453#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_13.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="194">
+-          <caret line="175" column="1" selection-start-line="175" selection-start-column="1" selection-end-line="175" selection-end-column="1" />
+-          <folding>
+-            <element signature="e#434#453#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_14.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="92">
+-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+-          <folding>
+-            <element signature="e#371#390#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/xestocsv_cet.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="-263">
+-          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/time_feature_extraction.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="529">
+-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/xestocsv_crt_02.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="230">
+-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/xestocsv.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="1025">
+-          <caret line="113" selection-start-line="113" selection-end-line="113" />
+-          <folding>
+-            <element signature="e#426#445#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/data/bpic2012.csv">
+-      <provider selected="true" editor-type-id="csv-text-editor">
+-        <state relative-caret-position="276">
+-          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+-        </state>
+-      </provider>
+-      <provider editor-type-id="LargeFileEditor">
+-        <state relative-caret-position="299">
+-          <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_nn.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="2120">
+-          <caret line="113" column="10" lean-forward="true" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
+-          <folding>
+-            <element signature="e#186#205#0" expanded="true" />
+-          </folding>
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/venv/crt_prediction_lstm_15.py">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="515">
+-          <caret line="310" column="35" selection-start-line="310" selection-start-column="35" selection-end-line="310" selection-end-column="35" />
+-        </state>
+-      </provider>
+-    </entry>
+-  </component>
+ </project>
+\ No newline at end of file
