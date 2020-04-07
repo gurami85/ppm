@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="339a678f-dff1-47de-9fdb-8cce004d7858" name="Default Changelist" comment="">
+    <list default="true" id="339a678f-dff1-47de-9fdb-8cce004d7858" name="Default Changelist" comment="update xestocsv.py">
+      <change beforePath="$PROJECT_DIR$/../kepri/ev_concept_drift_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kepri/ev_concept_drift_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kepri/ev_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kepri/ev_lstm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kepri/ev_lstm_concept_drift.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kepri/ev_lstm_concept_drift.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kepri/ev_visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/../kepri/ev_visualization.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,14 +33,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kepri" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Dev\PyCharm\workspace\kepri" />
+      <recent name="C:\Dev\PyCharm\workspace\ppm" />
       <recent name="C:\Dev\PyCharm\workspace\ppm\venv" />
       <recent name="C:\Dev\PyCharm\workspace\ppm\venv\exer" />
       <recent name="C:\Dev\PyCharm\workspace\ppm\venv\data" />
@@ -219,7 +226,28 @@
       <option name="project" value="LOCAL" />
       <updated>1585227411748</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update xestocsv.py">
+      <created>1585269504432</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585269504432</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update xestocsv.py">
+      <created>1585311348709</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585311348709</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update xestocsv.py">
+      <created>1585838495220</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585838495220</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -232,29 +260,42 @@
     </todo-panel>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update xestocsv.py" />
     <option name="LAST_COMMIT_MESSAGE" value="update xestocsv.py" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="931" y="207" key="CommitChangelistDialog2" timestamp="1585269469379">
+    <state x="931" y="207" key="CommitChangelistDialog2" timestamp="1585838494598">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="931" y="207" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1585269469379" />
+    <state x="466" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585311348007" />
+    <state x="699" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585719245380" />
+    <state x="931" y="207" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1585838494598" />
     <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog" timestamp="1585189718031">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1585189718031" />
-    <state x="873" y="429" key="Vcs.Push.Dialog.v2" timestamp="1585227415493">
+    <state x="1033" y="302" key="SettingsEditor" timestamp="1585807815040">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="429" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1585227415493" />
-    <state x="1021" y="473" key="git4idea.merge.GitPullDialog" timestamp="1585189807907">
+    <state x="1033" y="302" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1585807815040" />
+    <state x="873" y="429" key="Vcs.Push.Dialog.v2" timestamp="1586235355586">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1021" y="473" key="git4idea.merge.GitPullDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1585189807907" />
-    <state x="303" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1585207808944">
+    <state x="437" y="137" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1585311351314" />
+    <state x="873" y="429" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1586235355586" />
+    <state x="322" y="273" width="637" height="855" key="find.popup" timestamp="1585909639592">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="322" y="273" width="637" height="855" key="find.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1585909639592" />
+    <state x="1021" y="473" width="519" height="453" key="git4idea.merge.GitPullDialog" timestamp="1586235344609">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1021" y="473" width="519" height="453" key="git4idea.merge.GitPullDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1586235344609" />
+    <state x="152" y="155" width="672" height="330" key="search.everywhere.popup" timestamp="1585296554108">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="152" y="155" width="672" height="330" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1585296554108" />
     <state x="303" y="320" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1585207808944" />
   </component>
   <component name="XDebuggerManager">
