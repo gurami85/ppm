@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import pmdarima as pm
 from statsmodels.tsa.seasonal import seasonal_decompose
-from dateutil.parser import parse
 
 # Import
 data = pd.read_csv("../data/a10.csv", parse_dates=['date'], index_col='date')
