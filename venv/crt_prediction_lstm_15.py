@@ -146,7 +146,7 @@ hidden_size = 150        # default: 32
 output_dim = 1
 num_layers = 3          # default: 2
 learning_rate = 1e-3    # default: 1e-3
-num_epochs = 500        # default: 200
+num_epochs = 200        # default: 200
 
 # the LSTM model
 class LSTM(nn.Module):
