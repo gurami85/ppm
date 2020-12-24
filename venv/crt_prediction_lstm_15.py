@@ -4,7 +4,6 @@
 #   (1) execution time vector (weighted, accumulated), debugged
 #   (2) sequence of event, debugged
 #   (3) time from trace start
-# Ref: https://github.com/jessicayung/blog-code-snippets/blob/master/lstm-pytorch/lstm-baseline.py
 
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler, RobustScaler, OneHotEncoder
@@ -16,167 +15,29 @@ import torch.nn as nn
 from torch.nn.utils import rnn
 from matplotlib import pyplot as plt
 
-# [1. Preprocess]
+"""
+1. Preprocess
+"""
 
 # read data
-df = pd.read_csv("./data/bpic2012.csv")
-print(df)
+df = pd.read_csv("./data/bpic2012_refined.csv")
 
-# select only 'complete' events
-df = df.loc[df['lifecycle_type'] == 'complete']
-df = df.reset_index()   # reset index
-df['timestamp'] = pd.to_datetime(df['timestamp'])
-df['REG_DATE'] = pd.to_datetime(df['REG_DATE'])
-
-# make features: num. of completed events by hour of day
-hour_of_day = df['timestamp'].apply(lambda x: x.hour)
-hour_of_day_counts = hour_of_day.value_counts().sort_index()
-
-# make features: num. of completed events by day of week
-day_of_week = df['timestamp'].apply(lambda x: x.weekday())
-day_of_week_counts = day_of_week.value_counts().sort_index()
-num_of_events_day_of_week = day_of_week_counts[day_of_week]
-
-# calculate the number and lengths of traces
+# calculate trace number and lengths
 num_of_traces = len(np.unique(df['case_id']))
-traces_lens = df.groupby('case_id').nunique()['index']
+traces_lens = df.groupby('case_id').count().seq_of_event
 traces_lens = np.array(traces_lens)
 
-# calculate the number of activity types
-num_of_acts = len(np.unique(df['activity_type']))   # used as length of one hot encoded sequence
+# calculate a number of activity types
+num_of_acts = len(np.unique(df['activity_type']))
 
-# find the parting trace which is the last trace for the train/valid separation
+# find a parting trace which is the last trace for the train/valid separation
 parting_trace_idx = int(num_of_traces * 0.8)
 parting_trace_id = np.unique(df['case_id'])[parting_trace_idx]
 
-# find the parting event's index which is the last event's index of the parting trace
-# we use this index value later as a separation line between training and valid sets
-parting_event_idx = df.loc[df['case_id'] == parting_trace_id].index.values.astype(int)[-1]
-
-# calculate weighted execution time of each event
-#   case 1: only use 'complete' events and 'REG_DATE' attribute as trace start time
-hdc = pd.DataFrame()     # DataFrame for weights of hour of day
-hdc['weight'] = hour_of_day_counts
-min_weight = float(hdc.min() / hdc.max())  # for feature range (min_weight, 1) not (0, 1)
-scaler = MinMaxScaler(feature_range=(min_weight, 1))
-hdc = scaler.fit_transform(hdc)   # calculate hours weights through the scaling
-
-dwc = pd.DataFrame()     # DataFrame for weights of day of week
-dwc['weight'] = day_of_week_counts
-min_weight = float(dwc.min() / dwc.max())
-scaler = MinMaxScaler(feature_range=(min_weight, 1))
-dwc = scaler.fit_transform(dwc)     # calculate days weights through the scaling
-
-# calculate weighted execution time in minutes
-# ex) 2011-10-01 12:17:08.924000 ~ 2011-10-08 16:32:00.886000
-event_idx = 0
-exe_time_lst = []
-for i in range(num_of_traces):
-    num_of_events_in_trace = traces_lens[i]
-    for j in range(num_of_events_in_trace):
-        cur_time = df.iloc[event_idx]['timestamp']
-        if j is 0:
-            prev_time = df.iloc[event_idx]['REG_DATE']
-        else:
-            prev_time = df.iloc[event_idx-1]['timestamp']
-        # (1) residual time of first hour
-        # ex) 2011-10-01 12:17:08.924000 ~ 2011-10-01 13:00:00.000000
-        total_period = pd.date_range(start=str(prev_time.date()), end=str(cur_time.date()))
-        hour = prev_time.hour
-        hour_weight = hdc[hour]
-        res_hour = 0
-        if len(total_period) > 1 or prev_time.hour != cur_time.hour:
-            # for cases longer than a day (period >= 2days)
-            if len(total_period) >= 2:
-                res_hour = 24 - prev_time.hour
-            # for cases within a day (same day, different hour)
-            # ex) 2011-10-01 12:17:00 ~ 2011-10-01 16:00:00
-            else:
-                res_hour = cur_time.hour - prev_time.hour
-            res_min = 60 - prev_time.minute-1  # -1 min. because of res_sec
-            res_sec = 60 - prev_time.second
-            if res_min != 60:
-                res_hour -= 1
-        # for cases within an hour (same day and hour)
-        # ex) 2011-10-01 12:17:00 ~ 2011-10-01 12:48:00
-        else:
-            res_min = cur_time.minute - prev_time.minute
-            res_sec = cur_time.second - prev_time.second
-        res_time_first_hour = ((res_sec / 60) + res_min) * hour_weight
-        # (2) residual time of first day
-        # ex) 2011-10-01 13:00:00.000000 ~ 2011-10-02 00:00:00.000000
-        res_time_first_day = 0
-        if res_hour > 0:
-            for hour in range(prev_time.hour+1, prev_time.hour+1 + res_hour):
-                hour_weight = hdc[hour]
-                res_time_first_day += 60 * hour_weight
-        # (3) time of interim period
-        # ex) 2011-10-02 00:00:00.000000 ~ 2011.10.08 00:00:00.000000
-        interim_period_time = 0
-        if len(total_period) >= 3:
-            for day in range(1, len(total_period) - 1):   # except first/last days
-                day_weight = dwc[total_period[day].weekday()]
-                interim_period_time += 1440 * day_weight
-        # (4) residual time of last day
-        # ex) 2011.10.08 00:00:00.000000 ~ 2011.10.08 16:00:00.000000
-        res_time_last_day = 0
-        # res_time_last_day is for cases longer than a day (period >= 2days)
-        if len(total_period) >= 2:
-            for hour in range(cur_time.hour):
-                hour_weight = hdc[hour]
-                res_time_last_day += 60 * hour_weight
-        # (5) residual time of last hour
-        # ex) 2011.10.08 16:00:00.000000 ~ 2011.10.08 16:32:00.886000
-        hour_weight = hdc[cur_time.hour]
-        res_time_last_hour = 0
-        # res_time_last_hour cannot applied to the cases within an hour
-        if len(total_period) >= 2 or cur_time.hour != prev_time.hour:
-            res_time_last_hour = (cur_time.minute + (cur_time.second / 60)) * hour_weight
-        # if event_idx == 80036:  # test case: 2, 3, 10, 107, 114, 11557, 80036
-        #     print('prev_time = ' + str(prev_time))
-        #     print('cur_time = ' + str(cur_time))
-        #     print('res_time_first_hour = ' + str(res_time_first_hour))
-        #     print('res_time_first_day = ' + str(res_time_first_day))
-        #     print('interim_period_time = ' + str(interim_period_time))
-        #     print('res_time_last_day = ' + str(res_time_last_day))
-        #     print('res_time_last_hour = ' + str(res_time_last_hour))
-        exe_time = res_time_first_hour + res_time_first_day + interim_period_time + \
-            res_time_last_day + res_time_last_hour
-        exe_time_lst.append(exe_time)
-        event_idx += 1
-
-exe_time_df = pd.DataFrame(exe_time_lst, columns=['weighted_execution_time'])
-
-# make features: time from trace start
-# make target values: case remaining time
-#   case 1: use 'REG_DATE' in <trace>
-#   data sets fall into case 1: BPIC2012
-tfts_lst = []   # list for the set of time from trace start
-crt_lst = []    # list for the set of case remaining time
-case_id = None
-trace_start_time = None
-trace_end_time = None
-for idx, val in df.iterrows():
-    if case_id != val['case_id']:
-        case_id = val['case_id']
-        trace_start_time = val['REG_DATE']
-        lst_event = df.loc[df['case_id'] == case_id].iloc[-1]
-        trace_end_time = lst_event['timestamp']
-    cur_event_time = val['timestamp']
-    time_from_trace_start = (cur_event_time - trace_start_time).total_seconds()
-    tfts_lst.append(time_from_trace_start)
-    case_remaining_time = (trace_end_time - cur_event_time).total_seconds()
-    crt_lst.append(case_remaining_time)
-
-# case 2: no 'REG_DATE' in <trace>
-# data sets fall into case 2:
-# [!] not implemented
-
-# select feature set from the data frame
-df['time_from_trace_start'] = tfts_lst
-df['case_remaining_time'] = crt_lst
-df = df[['activity_type', 'seq_of_event', 'time_from_trace_start', 'case_remaining_time']]
-print(df)
+# find a parting event's index which is the last event's index of the parting trace.
+# used as a separation line between train/valid sets
+parting_event_idx = df.loc[df['case_id'] == parting_trace_id]\
+    .index.values.astype(int)[-1]
 
 # set up the transformer (one hot encoder, feature scaler)
 preprocess = make_column_transformer(
@@ -191,7 +52,6 @@ valid = preprocess.transform(df[parting_event_idx+1:]).toarray()
 
 # scale 'execution_time' values
 scaler = MinMaxScaler()
-exe_time_arr = scaler.fit_transform(exe_time_df)
 
 # replace ont-hot-encoded values into execution time values
 # for training set
@@ -201,8 +61,9 @@ for i in range(parting_trace_idx+1):
     for j in range(trace_len):
         for k in range(num_of_acts):
             if train[event_idx][k] == 1:
-                train[event_idx][k] = exe_time_arr[event_idx]
+                train[event_idx][k] = df.weighted_execution_time[event_idx]
         event_idx += 1
+
 
 # for validation set
 base_idx = parting_event_idx + 1
@@ -212,7 +73,7 @@ for i in range(parting_trace_idx+1, num_of_traces):
     for j in range(trace_len):
         for k in range(num_of_acts):
             if valid[event_idx][k] == 1:
-                valid[event_idx][k] = exe_time_arr[base_idx + event_idx]
+                valid[event_idx][k] = df.weighted_execution_time[base_idx + event_idx]
         event_idx += 1
 
 
@@ -222,57 +83,72 @@ event_idx = 0
 for i in range(parting_trace_idx+1):
     trace_len = traces_lens[i]
     for j in range(trace_len):
-        if j is not 0:
+        if j != 0:
             train[event_idx][:num_of_acts] = np.add(train[event_idx][:num_of_acts],
                                                     train[event_idx-1][:num_of_acts])
         event_idx += 1
+
 
 # for validation set
 event_idx = 0
 for i in range(parting_trace_idx+1, num_of_traces):
     trace_len = traces_lens[i]
     for j in range(trace_len):
-        if j is not 0:
+        if j != 0:
             valid[event_idx][:num_of_acts] = np.add(valid[event_idx][:num_of_acts],
                                                     valid[event_idx-1][:num_of_acts])
         event_idx += 1
+
 
 # calculate the size of input vector
 input_size = train.shape[1]-1    # excludes the attribute of target values
 
 # transformation (ndarray -> torch)
-def transform_data(arr):
-    x = arr[:, 0:input_size]
-    x_arr = np.array(x).reshape(1, -1, input_size)
-    y = arr[:, input_size]
-    y_arr = np.array(y)
+def transform_data(input_data: np.ndarray) -> (np.ndarray, np.ndarray):
+    x_lst, y_lst = [], []
+    size = len(input_data)
+    for i in range(size - seq_len + 1):
+        # input sequence
+        seq = input_data[i:i+seq_len, :input_size]
+        # target values of current time steps
+        target = input_data[i+seq_len-1, -1]
+        x_lst.append(seq)
+        y_lst.append(target)
+    x_arr = np.array(x_lst)
+    y_arr = np.array(y_lst)
     print("[INFO]x_arr.shape = " + str(x_arr.shape))
     print("[INFO]y_arr.shape = " + str(y_arr.shape))
-    x_var = Variable(torch.from_numpy(x_arr).float())
-    y_var = Variable(torch.from_numpy(y_arr).float())
-    return x_var, y_var
+    return x_arr, y_arr
 
 
 # select device between gpu and cpu
 dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.float
+
+seq_len = 10
+batch_size = 100
+
 x_train, y_train = transform_data(train)
 x_valid, y_valid = transform_data(valid)
-x_train.type(dtype)
-y_train.type(dtype)
-x_valid.type(dtype)
-y_valid.type(dtype)
+
+# calculate a number of batches
+num_batches = int(x_train.shape[0] / batch_size)
+
+if x_train.shape[0] % batch_size != 0:
+    num_batches += 1
 
 
-# [2. Model Definition]
+"""
+2. Model Definition
+"""
 
-# setup the hyperparameters
+# hyperparameters setup
 hidden_size = 150        # default: 32
 output_dim = 1
 num_layers = 3          # default: 2
 learning_rate = 1e-3    # default: 1e-3
 num_epochs = 500        # default: 200
 
-# the LSTM model (baseline model in Ref)
+# the LSTM model
 class LSTM(nn.Module):
     def __init__(self, input_dim, hidden_dim, batch_size, output_dim=1, num_layers=2):
         super(LSTM, self).__init__()
@@ -290,64 +166,94 @@ class LSTM(nn.Module):
         return (torch.zeros(self.num_layers, self.batch_size, self.hidden_dim).type(dtype),
                 torch.zeros(self.num_layers, self.batch_size, self.hidden_dim).type(dtype))
     def forward(self, input):
-        input = input.type(dtype)
         # forward pass through LSTM layer
-        lstm_out, self.hidden = self.lstm(input.view(1, self.batch_size, -1))   # [1, batch_size, 24]
+        lstm_out, self.hidden = self.lstm(input) # [1, batch_size, 24]
         # only take the output from the final time step
-        y_pred = self.linear(lstm_out[-1].view(self.batch_size, -1))
+        y_pred = self.linear(lstm_out[:, -1])
         return y_pred.view(-1)
 
 model = LSTM(input_size, hidden_size, batch_size=1, output_dim=output_dim, num_layers=num_layers)
-# model.cuda()    # for cuda
+model.seq_len = seq_len
+model.cuda()    # for cuda
 loss_fn = torch.nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 
-# [3. Train Model]
+"""
+3. Train the Model
+"""
 
-hist = np.zeros(num_epochs)
-prev_loss = float('inf')    # for calculate loss difference
-for t in range(num_epochs): # for training
-# for t in range(1):         # for sanity checking
-    pred = torch.empty(0)   # tensor for all predictions
-    pred = pred.type(dtype)
-    model.batch_size = sum(traces_lens[:parting_trace_idx+1])  # batch_size = size of events in training set
-    model.hidden = model.init_hidden()  # initialize hidden state
-    # get predictions for the trace
-    pred = model(x_train[0][:parting_event_idx+1]).type(dtype)
-    # Forward pass
-    loss = loss_fn(pred, y_train.type(dtype))
-    print("[INFO] Epoch ", t, ", Loss: ", loss.item(), ", Difference: ", (loss.item() - prev_loss))
-    prev_loss = loss.item()
-    hist[t] = loss.item()
-    # Zero out gradient, else they will accumulate between epochs
-    optimizer.zero_grad()
-    # Backward pass
-    loss.backward()
-    # Update parameters
-    optimizer.step()
+hist = np.zeros(num_epochs)     # loss history
+for t in range(num_epochs):     # for each epoch
+# for t in range(1):            # [TEST]
+    y_pred = np.empty(0)
+    for i in range(num_batches):    # for each batch
+        print("Training the model: %d/%dth epoch, %d/%dth batch..."
+              % (t + 1, num_epochs, i + 1, num_batches), end='\r')
+        # last batch
+        if i == num_batches-1:
+            x_batch_arr = x_train[i*batch_size:]
+            y_batch_arr = y_train[i*batch_size:]
+        # other batches
+        else:
+            x_batch_arr = x_train[i*batch_size:i*batch_size+batch_size]
+            y_batch_arr = y_train[i*batch_size:i*batch_size+batch_size]
+        # transformation (ndarray -> torch)
+        x_batch = Variable(torch.from_numpy(x_batch_arr).float()).type(dtype)
+        y_batch = Variable(torch.from_numpy(y_batch_arr).float()).type(dtype)
+        model.batch_size = x_batch.shape[0]
+        model.hidden = model.init_hidden()
+        # get predictions for the batch
+        pred_i = model(x_batch)
+        # forward pass
+        loss_train = loss_fn(pred_i, y_batch)
+        # zero out gradient, else they will accumulate between epochs
+        optimizer.zero_grad()
+        # backward pass
+        loss_train.backward()
+        # update parameters
+        optimizer.step()
+        # store the predictions
+        y_pred = np.append(y_pred, pred_i.detach().cpu().numpy(), axis=0)
+    if t == 0:
+        loss_prev = float('inf')
+    else:
+        loss_prev = hist[t-1]
+    # measure a loss in the current epohch
+    loss_train = loss_fn(torch.from_numpy(y_pred), torch.from_numpy(y_train)).item()
+    print("[INFO] Epoch ", t, ", Loss: ", loss_train, ", Difference: ", (loss_train - loss_prev))
+    hist[t] = loss_train
 
 
-# [4. Visualization]
+"""
+4. Visualization
+"""
 
-# transform data for the visualization
-y_train = y_train.detach().cpu().numpy()
-pred = pred.detach().cpu().numpy()
+# default visualization setup
+plt.figure(dpi=100)     # set the resolution of plot
+# set the default parameters of visualization
+color_main = '#2c4b9d'
+color_sub = '#00a650'
+color_ssub = '#ef9c00'
+color_sssub = '#e6551e'
+font_family = 'Calibri'
+plt.rcParams.update({'font.family': font_family, 'font.size': 23, 'lines.linewidth': 1,
+                    "patch.force_edgecolor": True, 'legend.fontsize': 18})
 
 # calculate residual errors
 err_func = lambda x, y: abs(x - y)
-errors = err_func(y_train, pred)
+errors = err_func(y_train, y_pred)
 
-# visualize line plot
+# line plot
 # plt.plot(errors, label="Residual Errors", kind='bar')
 plt.plot(y_train, label="Actual Data")
-plt.plot(pred, label="Predictions")
-plt.legend()
+plt.plot(y_pred, label="Predictions")
+plt.legend(loc='best')
 plt.show()
 
 # visualize scatter plot
 fig, ax = plt.subplots()
-ax.scatter(y_train, pred, 10)   # 10: marker size
+ax.scatter(y_train, y_pred, 10)   # 10: marker size
 ax.plot([y_train.min(), y_train.max()], [y_train.min(), y_train.max()], 'k--', lw=2)
 ax.set_xlabel('Actual Data')
 ax.set_ylabel('Predictions')
