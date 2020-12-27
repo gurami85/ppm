@@ -12,7 +12,6 @@ import numpy as np
 import torch
 from torch.autograd import Variable
 import torch.nn as nn
-from torch.nn.utils import rnn
 from matplotlib import pyplot as plt
 
 """
@@ -42,8 +41,8 @@ parting_event_idx = df.loc[df['case_id'] == parting_trace_id]\
 # set up the transformer (one hot encoder, feature scaler)
 preprocess = make_column_transformer(
     (OneHotEncoder(), ['activity_type']),
-    (MinMaxScaler(), ['seq_of_event']),
-    (RobustScaler(), ['time_from_trace_start', 'case_remaining_time'])
+    (RobustScaler(), ['seq_of_event', 'time_from_trace_start']),
+    ('passthrough', ['case_remaining_time'])
 )
 
 # transform data and separate it into train/valid sets
@@ -223,6 +222,14 @@ for t in range(num_epochs):     # for each epoch
     loss_train = loss_fn(torch.from_numpy(y_pred), torch.from_numpy(y_train)).item()
     print("[INFO] Epoch ", t, ", Loss: ", loss_train, ", Difference: ", (loss_train - loss_prev))
     hist[t] = loss_train
+
+
+def mean_absolute_percentage_error(y_true, y_pred):
+    y_true, y_pred = np.array(y_true), np.array(y_pred)
+    return np.mean(np.abs((y_true - y_pred) / y_true)) * 100
+
+
+loss_mape = mean_absolute_percentage_error(y_train, y_pred)
 
 
 """

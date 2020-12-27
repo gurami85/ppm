@@ -137,7 +137,7 @@ for i in range(num_of_traces):
 df['weighted_execution_time'] = exe_time_lst
 
 # [Feature] time from trace start
-# [Feature] case remaining time (target variable)
+# [Feature] case remaining time (target variable, days)
 tfts_lst = []   # list for the set of time from trace start
 crt_lst = []    # list for the set of case remaining time
 case_id = None
@@ -154,6 +154,8 @@ for idx, val in df.iterrows():
     time_from_trace_start = (cur_event_time - trace_start_time).total_seconds()
     tfts_lst.append(time_from_trace_start)
     case_remaining_time = (trace_end_time - cur_event_time).total_seconds()
+    # seconds -> days
+    case_remaining_time /= (60*60*24)
     crt_lst.append(case_remaining_time)
 
 
