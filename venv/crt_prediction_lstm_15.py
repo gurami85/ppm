@@ -224,12 +224,19 @@ for t in range(num_epochs):     # for each epoch
     hist[t] = loss_train
 
 
-def mean_absolute_percentage_error(y_true, y_pred):
-    y_true, y_pred = np.array(y_true), np.array(y_pred)
-    return np.mean(np.abs((y_true - y_pred) / y_true)) * 100
+# # deprecated (the divide by zero problem)
+# def mean_absolute_percentage_error(y_obs, y_hat):
+#     y_obs, y_hat = np.array(y_obs), np.array(y_hat)
+#     return np.mean(np.abs((y_obs - y_hat) / y_obs)) * 100
+#
+#
+# loss_mape = mean_absolute_percentage_error(y_train, y_pred)
 
+def weighted_mean_absolute_percentage_error(y_obs, y_hat):
+    y_obs, y_hat = np.array(y_obs), np.array(y_hat)
+    return np.abs(y_obs - y_hat).sum() / y_obs.sum()
 
-loss_mape = mean_absolute_percentage_error(y_train, y_pred)
+wmape = weighted_mean_absolute_percentage_error(y_train, y_pred)
 
 
 """
