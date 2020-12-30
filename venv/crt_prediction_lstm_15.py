@@ -173,7 +173,8 @@ class LSTM(nn.Module):
 
 model = LSTM(input_size, hidden_size, batch_size=1, output_dim=output_dim, num_layers=num_layers)
 model.seq_len = seq_len
-model.cuda()    # for cuda
+if torch.cuda.is_available() == True:
+    model.cuda()    # for cuda
 loss_fn = torch.nn.L1Loss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
